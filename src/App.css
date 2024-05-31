@@ -1,38 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .App {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-bottom: 20px;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 70%;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #f0f0f0;
+  border-color: #bbb;
+}
+
+.filter-buttons select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+li:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+li span {
+  flex-grow: 1;
+  text-align: left;
+}
+
+li span.completed {
+  text-decoration: line-through;
+  color: #777;
+}
+
+li button {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: #c82333;
 }
